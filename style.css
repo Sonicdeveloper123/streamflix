@@ -346,7 +346,7 @@ video {
   .account-container {
     flex-direction: column; /* Stack image on top of form */
     margin: 10px auto;
-    flex: 1;
+  
   }
 
   .left-side {
@@ -380,10 +380,14 @@ video {
 
 /* Very Small Phones (Max 480px) */
 @media (max-width: 480px) {
+  body {
+      display: flex;
+  flex-direction: column;
+  }
   .account-container {
   display: flex;
   flex-direction: column;
-  flex: 1;
+ 
   
 }
   .overlay h1 {
