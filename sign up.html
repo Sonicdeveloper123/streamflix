@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Streamer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="account-container">
+    <!-- Left Side - Image / Branding -->
+    <div class="left-side">
+      <div class="overlay">
+        <h1>StreamFlix</h1>
+        <p>Unlimited movies & TV shows</p>
+      </div>
+    </div>
+
+    <!-- Right Side - Form -->
+    <div class="right-side">
+      <div class="form-box">
+        <h2>Sign in your Account</h2>
+        <p class="subtitle">Join thousands of movie lovers today!</p>
+
+        <form id="accountForm">
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" id="fullName" placeholder="John Doe" required>
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Create a strong password" required>
+            <span id="togglePassword" class="toggle-password"></span>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+          </div>
+
+          <button type="submit" class="create-btn" onclick= create() >create</button>
+        </form>
+
+        <div class="divider">
+          <span>OR</span>
+        </div>
+
+        <!-- Social Login -->
+        <div class="social-login">
+          <button class="social-btn google">
+            <span>♎                                                              </span> Continue with Google
+          </button>
+          <button class="social-btn facebook">
+            <span>🔵</span> Continue with Facebook
+          </button>
+        </div>
+
+        <p class="login-link">
+          don't have an account? 
+          <a href="movie.html" onclick="signup()">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="container">
+    <!-- Main Player -->
+    <div class="player-section">
+      <video id="mainVideo" controls width="100%" height="auto">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="video-info">
+        <h2 id="videoTitle">Select a movie from the playlist</h2>
+        <p id="videoDesc">Enjoy free 30mb for siging in</p>
+      </div>
+    </div>
+
+    <!-- Play  list  Sidebar -->
+    <div class="playlist-section">
+      <h2>Movie Playlist (Unlimited Videos)</h2>
+      <input type="text" id="search" placeholder="Search movies..." onkeyup="filterPlaylist()">
+
+      <div id="playlist" class="playlist"></div>
+    </div>
+  </div>
+
+  <script src="moriola.js">
+    function create(){
+        window.location.href="netflix.html"
+    }
+    function signup(){
+        window.location.href="index.html"
+    }
+  </script>
+</body>
+</html>
