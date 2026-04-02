@@ -52,7 +52,7 @@ body {
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s;
-    height: 30vh;
+    height: 100%;
 }
 
 .movie-card:hover { transform: scale(1.05); }
@@ -144,3 +144,56 @@ body {
     color: white;
     cursor: pointer;
 } 
+/* Tablet and Small Screens (Max 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stacks logo and search bar */
+        gap: 15px;
+        padding: 15px 5%;
+    }
+
+    #searchBar {
+        width: 100%; /* Search bar takes full width on mobile */
+        box-sizing: border-box;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .movie-grid {
+        /* Shows 2 movies side-by-side on tablets */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .movie-card {
+        padding: 25px 25px 25px 25px;/* Let content define height on smaller screens */
+    }
+
+    .modal-content {
+        width: 95%; /* Modal fills more of the screen */
+        margin: 20% auto;
+    }
+
+    .close-btn {
+        right: 5px;
+        top: -45px;
+    }
+}
+
+/* Mobile Phones (Max 480px) */
+@media (max-width: 480px) {
+    .movie-grid {
+        /* Shows 1 or 2 movies depending on screen size */
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .container {
+        padding: 10px 3%;
+    }
+
+    .movie-info h3 {
+        font-size: 0.8rem;
+    }
+}
