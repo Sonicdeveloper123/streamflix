@@ -322,7 +322,7 @@ video {
 /* --- Shared Responsive Logic --- */
 
 /* Tablets and Small Laptops (Max 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   .account-container {
     width: 95%;
     margin: 20px auto;
@@ -341,14 +341,17 @@ video {
 }
 
 /* Mobile Devices (Max 768px) */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   /* Account Page Adjustments */
   .account-container {
     flex-direction: column; /* Stack image on top of form */
     margin: 10px auto;
   
   }
-
+body {
+      display: flex;
+  flex-direction: column;
+  }
   .left-side {
     min-height: 250px; /* Smaller header image on mobile */
     flex: none;
