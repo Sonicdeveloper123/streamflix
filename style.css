@@ -319,23 +319,81 @@ video {
   color: #aaa;
 }
 
-/* Responsive */
-/* @media (max-width: 900px) {
-  .container {
-    flex-direction: column;
+/* --- Shared Responsive Logic --- */
+
+/* Tablets and Small Laptops (Max 1024px) */
+@media (max-width: 1024px) {
+  .account-container {
+    width: 95%;
+    margin: 20px auto;
   }
-} */
-@media (max-width: 768px){
-    .container{
-      padding: 25px 25px 25px 25px;
-    }
-    .account-container{
-       padding: 25px 25px 25px 25px;
-    }
-    .form-box {
-     padding: 25px 25px 25px 25px;
+  
+  .player-section {
+    flex: 100%; /* Video takes full width */
+  }
+
+  .playlist-section {
+    flex: 100%; /* Playlist moves below video */
+    max-height: none;
+  }
 }
-.playlist-section {
-  padding: 25px 25px 25px 25px;
+
+/* Mobile Devices (Max 768px) */
+@media (max-width: 768px) {
+  /* Account Page Adjustments */
+  .account-container {
+    flex-direction: column; /* Stack image on top of form */
+    margin: 10px auto;
+  }
+
+  .left-side {
+    min-height: 250px; /* Smaller header image on mobile */
+    flex: none;
+  }
+
+  .overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .right-side {
+    padding: 30px 20px; /* Less padding for smaller screens */
+  }
+
+  /* Player Page Adjustments */
+  .container {
+    padding: 0 10px;
+    gap: 15px;
+  }
+
+  .video-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .playlist-item img {
+    width: 80px; /* Smaller thumbnails */
+    height: 50px;
+  }
 }
+
+/* Very Small Phones (Max 480px) */
+@media (max-width: 480px) {
+  .overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .input-group input {
+    padding: 12px; /* Slightly smaller inputs */
+  }
+
+  .social-login button {
+    font-size: 0.9rem;
+  }
+
+  .playlist-item .info h4 {
+    font-size: 0.85rem;
+  }
 }
