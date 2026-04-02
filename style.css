@@ -326,6 +326,7 @@ video {
   .account-container {
     width: 95%;
     margin: 20px auto;
+    flex: 1;
   }
   
   .player-section {
@@ -335,6 +336,7 @@ video {
   .playlist-section {
     flex: 100%; /* Playlist moves below video */
     max-height: none;
+    flex: 1;
   }
 }
 
@@ -344,6 +346,7 @@ video {
   .account-container {
     flex-direction: column; /* Stack image on top of form */
     margin: 10px auto;
+    flex: 1;
   }
 
   .left-side {
@@ -377,6 +380,12 @@ video {
 
 /* Very Small Phones (Max 480px) */
 @media (max-width: 480px) {
+  .account-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  
+}
   .overlay h1 {
     font-size: 1.8rem;
   }
