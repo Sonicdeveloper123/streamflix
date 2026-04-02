@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+     <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>StreamFlix - Your Movie Hub</title>
+    <link rel="stylesheet" href="netflix.css">
+</head>
+<body>
+    <!-- 1. Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">STREAMFLIX</div>
+        <input type="text" id="searchBar" placeholder="Search movies...">
+    </nav>
+
+    <!-- 2. Main Grid Container -->
+    <main class="container">
+        <!-- This is where your JavaScript will inject the movie cards -->
+        <div id="movieGrid" class="movie-grid"></div>
+    </main>
+    <!-- 3. Video Modal Player (Hidden by default) -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="video-wrapper">
+                <iframe id="videoPlayer" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+<iframe 
+  src="https://www.youtube.com/embed/VIDEO_ID" 
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen>
+</iframe>
+
+    <!-- 4. Link to your Script -->
+    <script src="script.js"></script>
+</body>
+</html>
